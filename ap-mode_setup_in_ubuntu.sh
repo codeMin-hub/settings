@@ -9,7 +9,8 @@ sudo apt install iw -y
 sudo nano /etc/hostapd/hostapd.conf
 # add value
 interface=ap0
-ssid=ssid # set ssid
+# set ssid
+ssid=ssid
 hw_mode=g
 channel=6
 ieee80211n=1
@@ -19,7 +20,8 @@ auth_algs=1
 ignore_broadcast_ssid=0
 wpa=2
 wpa_key_mgmt=WPA-PSK
-wpa_passphrase=password # set password
+# set password
+wpa_passphrase=password
 rsn_pairwise=CCMP
 
 # command
@@ -32,7 +34,8 @@ sudo nano /etc/dnsmasq.conf
 # add value
 port=5353
 interface=ap0
-dhcp-range=192.168.3.2,192.168.3.20,255.255.255.0,24H # set dhcp range
+# set dhcp range
+dhcp-range=192.168.3.2,192.168.3.20,255.255.255.0,24H
 
 # command
 sudo nano /etc/sysctl.conf
@@ -43,9 +46,10 @@ net.ipv4.ip_forward=1
 sudo nano /etc/systemd/system/ap-mode.service
 # add value
 [Unit]
-Description=AP Network Setup # set dhcp range in ExecStart
+Description=AP Network Setup
 After=network.target
 
+# set dhcp range in ExecStart
 [Service]
 Type=oneshot
 ExecStart=/bin/bash -c "/usr/bin/sudo /sbin/iw dev wlan0 interface add ap0 type __ap && \
