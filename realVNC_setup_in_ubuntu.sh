@@ -1,10 +1,10 @@
 # install
 # Raspberry Pi
 wget https://downloads.realvnc.com/download/file/vnc.files/VNC-Server-7.14.0-Linux-ARM64.deb
-sudo apt install ./VNC-Server-7.14.0-Linux-ARM64.deb xserver-xorg-video-dummy
+sudo apt install ./VNC-Server-7.14.0-Linux-ARM64.deb xserver-xorg-video-dummy -y
 # Other
 wget https://downloads.realvnc.com/download/file/vnc.files/VNC-Server-7.14.0-Linux-x64.deb
-sudo apt install ./VNC-Server-7.14.0-Linux-x64.deb xserver-xorg-video-dummy
+sudo apt install ./VNC-Server-7.14.0-Linux-x64.deb xserver-xorg-video-dummy -y
 
 # command
 sudo systemctl enable vncserver-x11-serviced.service
