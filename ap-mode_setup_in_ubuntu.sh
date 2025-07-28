@@ -63,7 +63,13 @@ RemainAfterExit=true
 WantedBy=multi-user.target
 
 # command
+sudo systemctl daemon-reload
+sudo systemctl enable hostapd
+sudo systemctl enable dnsmasq
 sudo systemctl enable ap-mode.service
+sudo systemctl start hostapd
+sudo systemctl start dnsmasq
+sudo systemctl start ap-mode.service
 
 # command
 sudo reboot
