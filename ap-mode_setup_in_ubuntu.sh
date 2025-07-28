@@ -64,11 +64,11 @@ WantedBy=multi-user.target
 
 # command
 sudo systemctl daemon-reload
+sudo systemctl unmask hostapd.service
 sudo systemctl enable hostapd
-sudo systemctl enable dnsmasq
 sudo systemctl enable ap-mode.service
+sudo systemctl restart dnsmasq
 sudo systemctl start hostapd
-sudo systemctl start dnsmasq
 sudo systemctl start ap-mode.service
 
 # command
