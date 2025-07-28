@@ -1,6 +1,6 @@
 # install
-sudo apt install dnsmasq hostapd
-sudo apt install iw
+sudo apt install dnsmasq hostapd -y
+sudo apt install iw -y
 
 
 # setting
