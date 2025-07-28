@@ -1,3 +1,4 @@
+sudo clear
 locale  # check for UTF-8
 
 sudo apt update && sudo apt install locales -y
